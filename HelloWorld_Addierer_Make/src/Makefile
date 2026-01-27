@@ -1,7 +1,31 @@
+# CXX definiert den verwendeten C++-Compiler
 CXX = g++
+
 CXXFLAGS = -Wall -Wextra -std=c++17
+
+#--------------------------------------------
+# Werkzeuge für statische Libraries
+# -------------------------------------------
+
+# AR ist das Werkzeug/Werkzeugkasten zum Erzeugen und verwalten statischer Libraries (.a).
+# Die Library entsteht durch die Kombination der Archivoptionen (ARFLAGS).
 AR = ar
+
+# r = Objektdateien hinzufügen oder ersetzen (hier: add.o)
+# c = Library neu anlegen, falls sie noch nicht existiert (hier: libmylib.a)
+# s = Symbolindex/Symboltabelle für den Linker erzeugen
+
 ARFLAGS = rcs
+
+#--------------------------------------------
+# Projektziele und Dateien
+# -------------------------------------------
+
+# Name des erzeugten Executables.
+# TARGET ist eine Make-Variable mit dem Inhalt main.
+# Wenn später in diesem Makefile $TARGET geschrieben wird, ersetzt Make das textuell durch main. 
+# Gleiches gilt auch für die anderen festgelegten Make-Variablen.
+
 TARGET = main
 LIB = libmylib.a
 LIB_OBJS = add.o
