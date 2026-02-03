@@ -112,3 +112,8 @@ $(LIB_OBJS): add.cpp $(HDRS)
 clean:
 	rm -f $(TARGET) $(LIB_OBJS) $(MAIN_OBJS) $(LIB)
 
+#---------------------------------------------
+# Phony Targets
+# #-------------------------------------------
+
+.PHONY: all clean
