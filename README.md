@@ -90,6 +90,7 @@ HelloWorld_Addierer_CMake/
 
 ## Überprüfung der Voraussetzungen
 `cmake --version`
+
 `g++ --version`
 
 ## Build-Prozess mit CMake
@@ -100,6 +101,7 @@ HelloWorld_Addierer_CMake/
 2) Build-Verzeichnis vorbereiten
 
    `cd build`
+   
    `cmake ..`
 
    Dabei:
@@ -107,11 +109,11 @@ HelloWorld_Addierer_CMake/
    * Überprüft CMake den Compiler und die Spracheinstellungen
    * erzeugt CMake ein plattformspezifisches Buildsystem (z. B. Makefiles)
 
-3) Programm builden
+4) Programm builden
 
    `cmake --build`.
 
-4) Programm ausführen
+5) Programm ausführen
 
    Nach erfolgreichem Build:
 
