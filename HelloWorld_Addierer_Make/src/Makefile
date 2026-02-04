@@ -74,7 +74,8 @@ $(LIB): $(LIB_OBJS)
 
 # Das Executable 'main' (${TARGET}) wird aus main.o (${MAIN_OBJS}) und der statischen Library (${LIB}) gebaut.
 # Der Befehl '$(CXX) $(CXXFLAGS) -o $@ $(MAIN_OBJS) -L. -lmylib' bewirkt dabei Folgendes:
-	# Der C++-Compiler ($(CXX)) wird als Linker verwendet, um das Executable $@ (mit dem Namen des $(TARGETS) = main) zu erzeugen,
+	# Der C++-Compiler ($(CXX)) wird als Linker verwendet mit den Flags -Wall -Wextra -std=c++17 ($(CXXFLAGS)), 
+	# um das Executable $@ (mit dem Namen des $(TARGETS) = main) zu erzeugen,
 	# indem die Objektdatei $(MAIN_OBJS) (main.o) mit der statischen Library $(LIB) (libmylib.a) über -lmylib verknüpft wird. 
 	# Dabei wird durch -L. das aktuelle Verzeichnis als Library-Suchpfad verwendet.
 
