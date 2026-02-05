@@ -18,12 +18,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # PULIC bedeutet hier: Dieser Include-Pfad gilt für die Library selbst (damit add.cpp seinen Header findet) und auch für alle
 # Targets, die gegen die Library linken (z. B. das Executable), damit auch main.cpp add.h findet.
 
-add_library(mylib STATIC add.cpp)
-target_include_directories(mylib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_library(mylib STATIC src/add.cpp)
+target_include_directories(mylib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # 5) Executable erzeugen und gegen die Library linken
 # `add_executable` Baut das ausführbare Programm mit dem Namen `HelloWorld_Addierer` aus der main.cpp 
 # `target_link_libraries` linkt das executable `HelloWorld_Addierer` gegen `mylib`
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
