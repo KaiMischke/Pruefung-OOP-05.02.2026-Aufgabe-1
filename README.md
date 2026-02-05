@@ -100,6 +100,8 @@ HelloWorld_Addierer_CMake/
 
 2) Build-Verzeichnis vorbereiten
 
+   `mkdir build`
+
    `cd build`
    
    `cmake ..`
@@ -111,7 +113,7 @@ HelloWorld_Addierer_CMake/
 
 4) Programm builden
 
-   `cmake --build`.
+   `cmake --build .`
 
 5) Programm ausführen
 
